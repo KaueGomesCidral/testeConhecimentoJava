@@ -10,5 +10,7 @@ public class Exercicio_4 {
             System.out.println("O número " + num + " é par" );
         }else
             System.out.println("O número " + num + " é ímpar");
+
+        variavelScanner.close();
     }
 }
