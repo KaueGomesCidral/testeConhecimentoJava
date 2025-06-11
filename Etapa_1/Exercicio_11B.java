@@ -7,15 +7,23 @@ public class Exercicio_11B {
         for(int i = 0; i < cidades.length; i++){
             System.out.println("Digite um nome de uma cidade: ");
             cidades[i] = lerString.nextLine();
-            for(int j = 0; j < cidades.length; j++){
-                if(cidades[i] == cidades[j]){
-                    System.out.println("A cidade " + cidades[i] + " já foi cadastrada!");
-                }else
-                    System.out.println("A cidade " + cidades[i] + " não está na lista.");
+        }
+        System.out.print("Digite mais um nome de uma cidade: ");
+        String novacidade = lerString.nextLine();
+
+        boolean verificador = false;
+        for(int i = 0;i < cidades.length; i++){
+            if(cidades[i].equalsIgnoreCase(novacidade)){
+                verificador = true;
+                break;
             }
         }
-        for(int i = 0; i < cidades.length; i++){
-            System.out.println("Cidade " + (i + 1) +" : " + cidades[i] );
+        if(verificador){
+            System.out.println(String.format("A cidade %s já foi cadastrada!", novacidade));
+
+        }else{
+            System.out.println(String.format("A cidade %s não foi cadastrada!", novacidade));
+
         }
     }
 }
