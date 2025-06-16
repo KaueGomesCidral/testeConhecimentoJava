@@ -14,14 +14,18 @@ public class Exercicio_15 {
     }
 
     public static double divisao(double num1, double num2){
+        if(num2 == 0){
+            System.out.println("Erro: divisão por zero!");
+            return 0; // ou lançar um erro, mas pra agora isso tá ótimo
+        }
         return num1 / num2;
     }
     
     public static void main(String[] args) {
         Scanner verNum = new Scanner(System.in);
         System.out.println("Digite dois números: ");
-        double num1 = verNum.nextInt();
-        double num2 = verNum.nextInt();
+        double num1 = verNum.nextDouble();
+        double num2 = verNum.nextDouble();
 
         System.out.println("Qual opção você quer fazer?");
         System.out.println("1 - Somar");
