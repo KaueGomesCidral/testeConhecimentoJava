@@ -7,5 +7,13 @@ public class Main {
        produto.quantidade = 10;
         
        produto.exibirInformacoes();
+
+       produto.adicionarEstoque();
+
+       produto.exibirInformacoes();
+
+       produto.removerEstoque();
+
+       produto.exibirInformacoes();
     }
 }
